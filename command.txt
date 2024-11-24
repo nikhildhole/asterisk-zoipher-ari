@@ -1,0 +1,4 @@
+docker build -t asterisk-setup .
+docker run -it asterisk-setup
+
+.\docker_cleanup.ps1
