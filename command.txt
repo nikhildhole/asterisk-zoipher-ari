@@ -1,4 +1,4 @@
-docker build -t asterisk-setup .
-docker run -it asterisk-setup
+docker build -t asterisk-setup-3 .
+docker run -it -p 5060:5060/udp asterisk-setup-3 /bin/bash
 
 .\docker_cleanup.ps1

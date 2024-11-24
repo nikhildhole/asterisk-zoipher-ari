@@ -1,0 +1,21 @@
+# Start with the existing image
+FROM asterisk-setup
+
+# Run the commands you need to execute
+RUN groupadd asterisk && \
+    useradd -r -d /var/lib/asterisk -g asterisk asterisk && \
+    usermod -aG audio,dialout asterisk && \
+    chown -R asterisk:asterisk /etc/asterisk && \
+    chown -R asterisk:asterisk /var/lib/asterisk && \
+    chown -R asterisk:asterisk /var/log/asterisk && \
+    chown -R asterisk:asterisk /var/spool/asterisk && \
+    chown -R asterisk:asterisk /usr/lib/asterisk
+
+# Set the user to asterisk for any further operations
+USER asterisk
+
+# Optionally set the working directory if needed (e.g., Asterisk directory)
+WORKDIR /etc/asterisk
+
+# Define the command to run when the container starts
+CMD ["/bin/bash"]
