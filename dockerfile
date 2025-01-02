@@ -2,7 +2,7 @@
 FROM debian:11
 
 # Metadata information
-LABEL maintainer="Nikhil Dhole nikhildadadhole@gmail.com, Sukumar Dhangar"
+LABEL maintainer="Nikhil Dhole nikhildadadhole@gmail.com, Sukumar Dhangar sukumardhangar2000@gmail.com"
 LABEL version="1.0"
 LABEL description="Asterisk 22 Docker image with custom configuration, Node.js, sngrep, and other utilities."
 LABEL creation_date="2024-11-23"
